@@ -1,0 +1,150 @@
+# Control statements
+# importing of modules
+from math import *
+r = float(input("Enter the radius of circle:"))
+print("area =", pi*r**2) # pi is imported from math module
+
+# The if statement
+num=1
+if num == 1:
+    print("one.")
+else:
+    print("not one.")
+
+# The if statement
+num="hel "
+if num == "hel ":
+    print("one.")
+    print("hence many statements")
+    print("are knowns as suite")
+else:
+    print("not one.")
+
+# the elif statement.
+#program to  write digit into words
+
+n = int(input("Enter a number:"))
+
+if n == 0:
+    print("zero.")
+elif n == 1:
+    print("one")
+elif n == 2:
+    print("two")
+elif n == 3:
+    print("three")
+elif n == 4:
+    print("four")
+elif n == 5:
+    print("five")
+else:                     #else statment is optional.
+    print("enter number between 0 to 5")
+
+#The while loop.
+x = 1
+while x<=10:
+    print(x)
+    x=x+1
+print("end")
+
+#The while loop.
+
+x,y = [int(a) for a in input("enter min and max value:").split()]
+m=x
+
+while m>=x and m<=y:
+    print(m)
+    m=m+3
+print("end")
+
+#the for loop: we can also use for loop with list and tuples.
+str = "hello"
+for i  in str:
+    print(i,end="") #displays hello
+
+print()
+print(len(str)) #displays 5
+
+for i in range(len(str)):
+    print(str[i],end="") #displays hello
+
+#the break statement.
+#the break statement is useful to come out of any loop when need
+
+x = 10
+while x>=0:
+    print(x)
+    x-=1
+    if(x<=5):
+        break
+
+#the continue statement.
+#the continue statement is useful jump on nxt iteration A/Q to condition.
+
+x = 10
+while x>=0:
+    if (x <= 5):
+        continue
+    print(x)
+    x-=1
+
+
+# the pass statement
+# the pass statement is used to pass value in which we are not interested.
+
+lst = eval(input("Enter list:"))
+for i in lst:
+    if i<50:
+        pass # here we are not interested in values less than 50.
+    else:
+        print(i)
+
+#the assert statement.
+# this statement is useful to check that a perticular condition is fullfilled or not.
+# it throws AssertionError. and can be handled by try except bock.
+x = int(input("enter x:"))
+assert x>0, "wrong value bcoz less than zero"
+print("the entered value is:",x)
+
+
+# same thing done with try and except block.
+
+y = int(input("enter y:"))
+try:
+    assert x>5
+    print("u entered:",y)
+except AssertionError:
+    print("wrong input.")
+
+#The return statement.
+#it is used to return a value from where it is called.
+#mostly used with functions
+
+def func(a,b):
+    return (a+b)
+
+print(func(10,5))
+
+# prime numbers
+num = int(input("Enter a number:"))
+for i in range(2,num):
+    if num % i == 0:
+        break
+else:
+    print("prime number.")
+
+# fibonacci numbers(0112358....)
+f1 = 0
+f2 = 1
+n = int(input("Enter n- series of fibonacci:"))
+c = 0
+print(f1,end="")
+print(f2,end="")
+while c<n:
+    f = f1+f2
+    print(f,end="")
+    f1 = f2
+    f2 = f
+    c+=1
+print()
+print("end.....")

@@ -1,0 +1,97 @@
+#Operators
+-Arithmetic operators- +, -, *, /, %(mod),** (power),  //  (gives result in integer after division).
+-Assignment operator- =, +=, etc
+eg a = b = 1 #  it is possible displays a=1 and b= 1
+eg a = 1; b = 2 # for assignment in the same line it must be separated by semi-colon.
+eg. a, b = 5, 6
+print("a=",a,"b=",b)  # display a=5, b=6
+
+#Unary minus operator
+a = 2
+a = -a   #displays -2
+print(-a)  #displays 2
+
+# Relational operator. - ==, >=, etc
+a,b=5,4
+if a>b:
+    print("true")
+else:
+    print("false")
+# Logical operators.- and, or, not.
+#logic
+a =1; b=2
+print(a and b) #show 2.
+print(a or b)  #show 1.
+print(not a)   #show false.
+
+#Bitwise operators.  
+unary- ~,<<, >>
+binary- &,  |,  ^
+
+s=10
+x = ~s
+print(x)  #displays -11
+---------------------------------
+s1 = 10
+s2 = 11
+s = s1&s2
+print(s)  #displays 10
+
+#Membership operators
+1. in (genearlly used in for loops and in if conditions.)
+ 
+lst = [5,10,15,78,"hello","world"]
+for i in lst:
+    print(i)
+
+2.not in
+work just opposite of in operator.
+
+# Identity operator.
+1. is (compares the memory location not the value of the object.)
+in case of variable.
+a=5	#id(a)-5088   for eg	
+b=5	#id(b)-5088
+if a is b:
+    print("same memory location")   #displays same memory location
+else:
+    print("not same memory location.")
+
+in case of list.
+lst1 = [1,2]
+lst2 = [1,2]
+if lst1 is lst2:      #displays different memory.
+    print("same memory location")
+else:
+    print("different memory")
+
+2. is not (work same as is operator but it has opposite results.)
+
+the memory location of an object can be known using id().
+a=5          # stores at same memory location.
+b=5
+print(id(a))  
+print(id(b))
+
+# Mathematical functions
+- importing of a function.
+
+some important functions
+#importing of a function.
+from math import *  #importing math module.
+a=gcd(56,84)
+print("gcd=",a)   #gives greatest common divisor
+
+a=5.7
+print("ceil=", ceil(a))   #displays 6
+print("floor=", floor(a))    #displays 5
+
+b=-9
+c=fabs(b)  #gives absolute value(positve)
+print("sqrt=", sqrt(c))
+print("factorial=", factorial(c))
+
+ 
+
+
+

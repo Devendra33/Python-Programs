@@ -1,0 +1,74 @@
+#output statements
+print()
+
+#output statements
+
+a="world"
+print("hello "+a)
+a,b=5,6
+print("the value of a & b are",a,b,sep=",")
+#displays the value of a & b are,5,6
+
+the print() statement throws cursor on nxt line to avoid this
+print("hello",end=" ")
+print("world",)    # displays hello world
+
+#the formatted strings in python
+a = 5
+b = 65.256324
+s = "world"
+
+print("a = %d"% a)   # brackets not required.
+print("the value of b = %.2f and string is = %s"%(b,s[0:3])) # brackets are required bcoz
+                                                        # more than 1 parameter is present.
+#left and right allign of strings
+print("(%10s)"% s)  #displays (     world)
+print("(%-10s)"% s) #displays (world     )
+
+# %c is used to display single character
+print("%c"% s[0])  # displays w
+
+n1 = 1
+n2 = 2
+n3 = 3
+print("one={} two={} three={}".format(n1,n2,n3))# displays one=1 two=2 three=3
+
+# if order of parameters changed so values are also changed
+print("one={0} two={1} three={2}".format(n1,n2,n3)) # displays one=1 two=2 three=3
+print("one={1} two={2} three={0}".format(n1,n2,n3)) #displays one=2 two=3 three=1
+
+# the values can be provided in format.
+
+print("one ={s} two={s1} three={s2}".format(s=n1,s1=n2,s2=n3)) #displays one =1 two=2 three=3
+
+#Inputs statements
+str = input("Enter any string.")  # default input as STRING.
+print("you entered: %s"% str)
+
+#for input in int, float, etc
+
+a = int(input("enter a num:"))
+print("you entered:", a)
+
+b = float(input("enter floating point number:"))
+print("you entered:", b)
+
+#input in form of list using for loop
+
+#limited number of input to some variable
+
+a,b,c = [int(x) for x in input("Enter 3 integers:(split using ,)").split(",")]
+print("a= %d \nb= %d \nc= %d"%(a,b,c))
+
+#input for list
+
+a= [x for x in input("enter different names using blanck spaces:").split()]
+print("list=",a)
+
+#eval() function: this function help us to take input as list or tuples directly.
+
+a = eval(input("enter a list")) #input [5,6,8,9,"hello"]
+print("list=",a)
+
+b = eval(input("enter a tuple.")) #input (5,8,2,"hey")
+print("tuple=",b)
