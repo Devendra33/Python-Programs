@@ -1,0 +1,283 @@
+#comments in python
+- single line comment
+# using hash tag we can create single line comment.
+
+#Docstrings.(documentation strings) 
+- multiple line comments
+actually python does not support multiple line comments.
+we can use '''(single) or """ (double) quotes for multiple line comments. generally it is not suggested by the programmers
+since these are not comments they are strings and strings are objects in python so space is allocated to them but they are not assigned to a variable so they are collected by garbage collected so they can be treated as comments.
+
+if we write strings in ''' or """ and it is the first line of any function, module, class so this strings are known as docstrings. they are useful to create an API(application program interface) documentation.
+
+#How python sees a variable.
+python is more efficiently manages the memory as compared to other languages such as C.
+eg. in python a=2 ; b=2;
+then  a--->2<----b
+in c language there are 2 different memory location so it requires more space and less memory efficient.
+
+#Datatypes in python.
+- Built in datatypes.
+1.none:- when object contains nothing then it has none datatype. just as NULL in java.
+ 
+2.numeric: it has 3 types 
+
+2.1. int    eg. a = 5 
+to convert int into float explicitly'
+b=float(a)
+print(b) # displays 5.0
+
+2.2 float  eg. a = 5.6
+to convert float into int explictly 
+b= int(a)
+print(b) #displays 5
+ 
+2.3 complex  eg a= 5+6J
+	let n=5
+	c=complex(n) 
+	print(c)   # displays 5+0J
+
+	let n1=6
+	     n2=10
+	c=complex(n1,n2)
+	print(c) # displays 6+10J
+
+2.4 binary(0b), octal(0o), hexadecimal(0x) numbers
+n1 = 0xa22
+n2 = 0o17
+n3 = 0b10011101
+print("hexa =",n1)     # displays hexa = 2594
+print("octal =",n2)	# displays octal = 15
+print("binary = ", n3)	# displays binary =  157
+
+2.4.1 If n1, n2, n3 in strings so
+n1 = "0xa22"
+n2 = "0o17"
+n3 = "0b10011101"
+#belows statements displays same results  as above statements 
+print("hexa =",int(n1,16))
+print("octal =",int(n2,8))
+print("binary = ", int(n3,2))
+
+2.4.2  INT to Binary, Octal, Hexadecimal
+
+a = 10
+n1 = bin(a)
+print("binary = ",n1)   #displays binary =  0b1010
+print("octal =",oct(a)) #displays octal = 0o12
+print("hexa= ",hex(a))  #displays hexa=  0xa
+
+2.5  Bool datatype
+it has 2 values only 
+1.True, generally considered as 1  (True+True = 2)
+2.False, generally considered as 0. (False - True = -1)	
+
+#program
+a=5<2
+print(a) #displays False
+
+#program
+a = 5>=2
+print(a) #displays True
+		
+3.sequence
+
+3.1 str(String)
+
+s = "hello guys this is string handling in python"
+#slicing
+print(s[0:1])  # displays h
+print(s[0:4])  # displays hell
+print(s[0:])   # displays whole string
+print(s[:4])   # displays hell so starting default is 0.
+print(s[0:5]*2) #displays hellohello 
+
+a = "Hello world"                      # print in a single line 
+print(a) #normal displays a
+
+a = """hello world
+want to learn 		# preserves spaces 	
+something more interesting"""
+print(a)                                # displays,  hello world
+	                              want to learn 
+	                              something more interesting
+
+
+3.2 byte
+- it is not modifi-able. (imp)
+- it stores element at the range of 0 to 255, even negative values are not allowed.
+- to create in byte data type we use bytes() function on the list.
+- elements can be retrieve through for loop only.
+
+a = [0,5,23,56,45]   #simple list
+a[0] = 10
+b = bytes(a)           #byte list
+print(a)
+for i in b:
+    print(i)             #displays 0,5,23,56,45
+
+
+3.3 bytearrays
+- bytearrays are same as byte but the only difference is bytearrays are modifiable.
+-function used to convert in bytearrays is bytearray().
+
+a = [0,5,23,56,45]   #simple list
+a[0] = 10
+b = bytearray(a)           #byte list
+print(a)
+b[0] = 20	# it is possible to modify byte arrays 	
+for i in b:
+    print(i)             #displays 0,5,23,56,45
+
+
+3.4 list
+- for loop is also applicable
+for i in lst:
+       print(i)
+#list
+
+lst = [34,21,55,"hello","world"]
+lst1 = ["i am lst1"]
+lst3 = [6,89,45,7,65,2,1]
+print(lst)    #displays whole list
+
+print(lst1*2) #displays 2 times lst1
+#slicing
+
+print(lst[0:])  #displays whole list
+print(lst[0:2]) # display 34 & 21
+
+# operations
+#insert 50 at 2 nd location and the element at 2nd(before) is shifted.
+lst.insert(2,"hello")  #returns nothing so
+# we cannot write this statement directly in print
+print(lst)
+
+# remove, it search and removes element(if 2 of same element is present
+# then only 1(starting) is removed)
+lst.remove("hello") # returns nothing
+print(lst)
+
+# append: adds a single element at the end of the list
+lst.append("appended")
+print(lst)
+
+#extend: adds up 2 differents list
+lst.extend(lst1)    # lst + lst1 performs same
+print(lst)
+
+#sort(): sort the list if string is present throws error
+lst3.sort()
+print(lst3)
+
+#reverse(): reverse the list
+lst.reverse()
+print(lst)
+
+#pop(): removes and Return last element of list
+b = lst.pop()
+print("the last element is: ",b)
+print("the remaing list is: "lst)
+
+3.5 tuple
+- for loop is applicable 
+for i in a:
+    print(i)
+
+- tuples are not modifiable.
+- slicing operation is possible.
+#tuples
+a = (5,7,9,"hello")
+print(a)  # prints whole tuple
+
+# slicing
+print(a[0:3])
+
+#multplicaltion
+print(a[0:1]*2)   #prints (5,5)
+
+3.6 range
+- it represents a sequence of  numbers
+- it is not modifiable
+- created to used in for loop
+# ranges
+r = range(10)
+for i in r:
+    print(i)  # prints 0 to 9
+
+r = range(30,40)
+for i in r:
+    print(i)  # prints 30 to 39
+
+r = range(30,40,2)
+for i in r:
+    print(i)  # prints 30 to 38 with difference of 2 eg. 30,32,34...
+
+
+
+
+4.sets: it has 2 types set and frozen sets;
+
+4.1  sets
+-it is unordered collection of elements so slicing operation is not possible 
+- it does not accept repeated values.
+-only single data type is allowed in a peticular set. means int and str cannot be together.
+- it is modifiable.
+#sets
+
+st=set("hello world")
+print(st)   # contains distinct elements
+
+st.update("i","a")
+print(st)          #adds i & a to set
+
+st.remove("i")
+print(st)       #removes i
+
+4.2 frozenset
+- it is same as the sets the only difference is that it is not modifiable.
+  so update and remove function are invalid.
+
+5.mapping(dictionaries)
+the elements are stored in key-value pairs. 
+-method of creation 
+-to define dictionary
+d={}
+-to add more elements in defined dictionary.
+d[4] ="new"
+d[6]="new1" 
+
+d = {1:"hello",2:"world"}
+here 1 & 2 are keys and hello, world are values respectively.
+#gives output: {1: 'hello', 2: 'world', 4: 'new', 6: 'new1'}
+
+# Literals in python
+a constant is known as literal eg. a=5, so 5 is literal.
+numeric literal - 5 or any numeric value.
+string literal- "hello"
+bool literal- true or false.
+
+#Escape sequences
+\ - new line continuation
+s1="hello" \
+   "world "
+print(s1)  #display hello world
+
+\\- display \
+\b- backslash
+\r-enter 
+s1="hello\rworld "
+print(s1)   #displays only world.
+\t- tabular space
+\v-vertical tab space.
+
+#for determining type of element
+s1="hello world "
+print(type(s1))   #displays <class str>.
+
+#User-defined data type
+the data type which are defined by the user is called as user defined data types.
+eg. arrays and classes.
+
+
+
