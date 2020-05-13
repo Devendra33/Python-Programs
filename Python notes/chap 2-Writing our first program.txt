@@ -1,0 +1,25 @@
+#Installing python for windows
+#installing numpy:- to create multi-dimesional arrays 
+#installing pandas:- used for data analysis
+#installing xlrd:- used to retrieve data from microsoft excel sheets.
+#installing matplotlib: for 2D graphics of good quality.
+
+# writing our first program
+a = 5
+b = 7
+print("sum=", a+b)
+
+#Execution of a python program 
+1- using cmd(command) prompt
+2-using python IDLE
+3- system prompt.
+The 1 & 2 are of interactive modes, gives output immediatly.
+last (3rd) one is known as non-interactive modes, we have to type the entire program.
+
+#Getting help in python.
+note: only valid for python IDLE.
+to open help utility mode type help() function in IDLE only. (eg. help>)
+then simply type "topics", to know what type of help we can get from IDLE.
+-to get out of help utility we simply has to press ENTER. 
+for direct help, write name of the topic inside the help function.
+eg help(print), so we info about print function.
