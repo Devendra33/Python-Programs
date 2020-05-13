@@ -1,0 +1,86 @@
+Chapter 1:Intro to python.
+
+PYTHON is developed by Guido van russom in 1991
+
+# Python is a object oriented and high level scripting language
+-it is combination of c and java languages
+-scripting language: does not use compiler rather it uses interpreter.
+
+# Features of python 
+-> open source
+-> dynamically typed: need not to declare anything before use.
+-> platform independent
+-> interpreted:souce code --compiler--> byte code --interpreter(PVM)--> machine code --->processor--->result.
+- PVM:python virtual machine
+- byte code: highly optimised set of instuction of operation in the source code.
+its size is 1 byte so it is known as byte code.
+-> extensible:other languages can be integrated to python.
+-eg. code written in c and c++ can be executed using PVM.
+->database connectivity: can be connected to db. such as mysql , oracle etc
+-> scalable: can be executed in new machine with new envirnment and can take full advantage of new envirnment. and run more efficiently.
+
+# Execution of python program
+-> name of source code should be saved as filename.py 
+- .py extension represents that it is a python file.
+-> compilation process.... 
+souce code --compiler--> byte code --interpreter(PVM)--> machine code --->processor--->result.
+- byte code file have extension of  .pyc 
+ .pyc file stands for python compile file
+
+- machine code is in binary format which is understand by computers.
+- the interpreter read line by line so execution takes time to compile whole program.  so it is  repaced by JIT(just in time compiler) for fast execution in pypy only.
+ pypy means coding behind the compiler is done by python itself
+Cpython is standard compiler: means coding behind the compilers is done using c language.
+Cpython uses interpreter not the JIT for converting byte code into machine code.
+
+->to separetly create byte code file in __pycache__ directory
+write in command(cmd) prompt.
+-python -m py_compile filename.py
+python is a command for calling python compiler.
+-m represents module.
+py_compile represents module name.
+the file created for byte code may  have name of x.cpython-34.pyc.
+cpython represents that compiler is created using c language.
+Now for the final result, just execute byte code
+(in cmd)  python x.cpython-34.pyc.
+note: directly executing the byte code takes less time this is why .pyc files are distributed to end user.
+
+#Viewing the byte code.
+-> write in cmd
+python -m dis filename.py
+this command will open byte code into human readable format.
+
+#Flavours of python
+-> cpython: compiler are implenmented using c. advantage is that we can execute c & c++ code in cpython.
+-> jython: implenmention of python program to run in java envirnment(JVM(java virtual machine)).
+-> ironpython: implemention of python language for .NET framework. it is written in c# language
+the python program compiles and gives intermediate language(IL) and this IL runs on (common language runtime)CLR for outputs. 
+-> pypy: this is implementation of python using python, pypy is written in a language known as Rpython which was created in python. pypy runs very fast because of JIT.
+-> Rubypython: this is  a bridge between the ruby and python interpreter.
+->pythonxy: it is prounced as python xy, this implementation that we get after scientific and engineering related packages.
+anacondapython: for handling large scale data processing. predictive analysis and scientific computing.
+
+# PVM (python virtual machine)
+the pvm is also known as interpreter which main role is to convert byte code into machine code.
+
+# Frozen binaries
+- when a S/W is developed in the python, it is distributed by 2 ways
+1. to give .pyc files to user then he had to install pvm in his computer to execute it 
+
+2.to give .pyc files , pvm along with neccessary libraries in a single true executable file
+which user can use it by just double clicking on it. called as frozen binaries.
+
+# Memory management in python
+-> the memory is allocated and deallocated at runtime automatically by the pvm itself.
+->everything in python is considered as object which are all stored in form of heap, the size of heap depends upon the size of RAM .
+# Garbage collector in python (gc)
+- gc runs automatic.
+- its work is to remove objects when they are not in use.
+- to deal with reference cycles( A-->B-->C-->A) forms a cyle, gc uses logic algorithm.
+- gc tries to removes younger objects rather than new objects. 
+- to run manually gc  collect() method can be used. it has 2 ways 
+1. time based: gc is called at a perticular interval of time. 
+2.event based. gc is called on an event such as when user disconnected from application.
+
+# comparision between python and c, java.
+from book page number: 15
