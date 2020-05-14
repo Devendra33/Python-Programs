@@ -1,0 +1,18 @@
+17 || 2019-11-13 19:46:14,405 || this is an error
+18 || 2019-11-13 19:46:14,406 || this is critical
+37 || 2019-11-13 19:46:17,588 || invalid value...plz enter value greater than 0.
+Traceback (most recent call last):
+  File "C:/Users/Lenovo/PycharmProjects/Practice/program/logging_exception.py", line 33, in <module>
+    raise user('invalid value...plz enter value greater than 0.')
+user: invalid value...plz enter value greater than 0.
+17 || 2019-11-13 22:05:47,054 || this is an error
+18 || 2019-11-13 22:05:47,054 || this is critical
+17 || 2019-12-22 23:00:08,838 || this is an error
+18 || 2019-12-22 23:00:08,838 || this is critical
+37 || 2019-12-22 23:00:18,328 || invalid value...plz enter value greater than 0.
+Traceback (most recent call last):
+  File "C:/Users/Lenovo/PycharmProjects/Practice/program/logging_exception.py", line 33, in <module>
+    raise user('invalid value...plz enter value greater than 0.')
+user: invalid value...plz enter value greater than 0.
+17 || 2019-12-22 23:02:53,423 || this is an error
+18 || 2019-12-22 23:02:53,439 || this is critical
